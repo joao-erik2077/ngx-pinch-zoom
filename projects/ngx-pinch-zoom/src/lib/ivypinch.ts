@@ -156,7 +156,7 @@ export class IvyPinch {
             return;
         }
 
-        event.preventDefault();
+        //event.preventDefault();
         const { clientX, clientY } = this.getClientPosition(event);
 
         if (!this.eventType) {
@@ -187,7 +187,7 @@ export class IvyPinch {
     };
 
     private handlePinch = (event: TouchEvent): void => {
-        event.preventDefault();
+        //event.preventDefault();
 
         if (this.eventType === undefined || this.eventType === 'pinch') {
             const touches = event.touches;
@@ -222,7 +222,7 @@ export class IvyPinch {
     };
 
     private handleWheel = (event: WheelEvent): void => {
-        event.preventDefault();
+        //event.preventDefault();
 
         const wheelZoomFactor = this.properties.wheelZoomFactor || 0;
         const zoomFactor = event.deltaY < 0 ? wheelZoomFactor : -wheelZoomFactor;
